@@ -1,0 +1,70 @@
+<html>
+<head>
+  <title>OpdrachtDC</title>
+  <style>
+    ol
+      {
+        list-style-type:none;
+        width:170px
+        height:480px;
+      }
+      li
+      {
+        height:30px;
+        width: 150px;
+        border:1px solid black;
+        margin:2px;
+        font-size:20px;
+        text-align: center;
+      }
+      #naam1 li
+      {
+        background-color:pink;
+      }
+      #naam2 li
+      {
+        background-color:silver;
+     }
+     fieldset{
+       float:left;
+       margin:30px;
+       width:200px;
+       height:500px;
+       border:5px solid black;
+     }
+  </style>
+  <link rel="stylesheet" href="jquery-ui.css">
+  <script src="jquery.js"></script>
+  <script src="jquery-ui.js"></script>
+  <script>
+  $(document).ready(function(){
+  $("#naam1").sortable({connectWith:"#naam2"});
+  $("#naam2").sortable({connectWith:"#naam1"});
+  });
+  </script>
+  </head>
+<body>
+<fieldset id="left">
+<legend><b>naam1</b></legend>
+<ol id="naam1">
+<li id="rick">Rick</li>
+<li id="joey">Joey</li>
+<li id="dylano">Dylano</li>
+<li id="tom">Tom</li>
+<li id="rio">Rio</li>
+<li id="mick">Mick</li>
+<li id="jayden">Jayden</li>
+</ol>
+</fieldset>
+   <fieldset id="right">
+   <legend><b>naam2</b></legend>
+   <ol id="naam2">
+   <li id="frenk">Frenk</li>
+   <li id="robin">Robin</li>
+   <li id="adrian">Adrian</li>
+   <li id="cas">Cas</li>
+   <li id="rien">Rien</li>
+   <li id="dion">Dion</li>
+   <li id="brink">Brink</li>
+</ol>
+</fieldset>
